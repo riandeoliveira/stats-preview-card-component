@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.title {
+    color: var(--data-color);
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: var(--info-color);
+    font-family: var(--info-font);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
