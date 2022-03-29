@@ -4,6 +4,14 @@ export const DataContainer = styled.div`
   display: flex;
   flex-direction: column-reverse;
   margin-right: 60px;
+
+  @media screen and (max-width: 1200px) {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 15px;
+  }
 `;
 
 export const DataTitle = styled.h2`
