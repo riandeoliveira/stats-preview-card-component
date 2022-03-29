@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/stats-preview-card-component/static/css/main.641fdca9.css",
+    "main.js": "/stats-preview-card-component/static/js/main.f039e5a1.js",
+    "static/media/workspace.png": "/stats-preview-card-component/static/media/workspace.c15664f4b36ca99649a3.png",
+    "index.html": "/stats-preview-card-component/index.html",
+    "main.641fdca9.css.map": "/stats-preview-card-component/static/css/main.641fdca9.css.map",
+    "main.f039e5a1.js.map": "/stats-preview-card-component/static/js/main.f039e5a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.641fdca9.css",
+    "static/js/main.f039e5a1.js"
+  ]
+}
