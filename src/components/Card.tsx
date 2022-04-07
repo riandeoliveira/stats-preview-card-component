@@ -1,40 +1,39 @@
+import content from "../content/card.json";
+import { CardProps } from "../interfaces/interfaces";
 import {
   CardContainer,
   HeaderArea,
   Workspace,
   MainArea,
-  ArticleArea,
+  DescriptionContainer,
   Title,
   Highlight,
   Description,
-  SectionArea,
+  DataContainer,
 } from "../styles/Card";
-import data from "../data/data.json";
-import workspace from "../assets/images/workspace.png";
+import { workspace } from "../assets/media";
 
-const { workspace_alt, title_1, highlight, title_2, description } = data;
+const { workspace_alt, title_1, highlight, title_2, description } = content;
 
-interface CardProps {
-  cardData: JSX.Element[];
-}
-
-export const Card: React.FC<CardProps> = ({ cardData }) => {
+const Card: React.FC<CardProps> = ({ data }): JSX.Element => {
   return (
-    <CardContainer>
+    <CardContainer className="card-container">
       <HeaderArea>
-        <Workspace alt={workspace_alt} src={workspace} />
+        <Workspace alt={workspace_alt} className="workspace" src={workspace} />
       </HeaderArea>
-      <MainArea>
-        <ArticleArea>
+      <MainArea className="main-area">
+        <DescriptionContainer className="description-container">
           <Title>
             {title_1}
             <Highlight>{highlight}</Highlight>
             {title_2}
           </Title>
-          <Description>{description}</Description>
-        </ArticleArea>
-        <SectionArea>{cardData}</SectionArea>
+          <Description className="description">{description}</Description>
+        </DescriptionContainer>
+        <DataContainer className="data-container">{data}</DataContainer>
       </MainArea>
     </CardContainer>
   );
 };
+
+export default Card;

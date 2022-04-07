@@ -1,15 +1,15 @@
-import { DataContainer, DataTitle, DataSubtitle } from "../styles/Data";
+import { DataProps } from "../interfaces/interfaces";
+import { InfoContainer, InfoName, InfoNumber } from "../styles/Data";
 
-interface DataProps {
-  name: string;
-  number: string;
-}
+const Data: React.FC<DataProps> = ({ content }): JSX.Element => {
+  const { info_name, info_number } = content;
 
-export const Data: React.FC<DataProps> = ({ name, number }) => {
   return (
-    <DataContainer>
-      <DataTitle>{name}</DataTitle>
-      <DataSubtitle>{number}</DataSubtitle>
-    </DataContainer>
+    <InfoContainer className="info-container">
+      <InfoName>{info_name}</InfoName>
+      <InfoNumber>{info_number}</InfoNumber>
+    </InfoContainer>
   );
 };
+
+export default Data;

@@ -1,13 +1,26 @@
-import data from "./data/data.json";
-import { Data } from "./components/Data";
-import { Card } from "./components/Card";
+import content from "./content/data.json";
+import { CardContent } from "./interfaces/interfaces";
+import Data from "./components/Data";
+import Card from "./components/Card";
 
-const { data_names, data_numbers } = data;
+const { data_content } = content;
 
-export const App: React.FC = () => {
-  const handleCardData = data_names.map((item, i) => (
-    <Data name={data_names[i]} number={data_numbers[i]} />
+const App: React.FC = (): JSX.Element => {
+  const setCardContent = (item: CardContent): CardContent => {
+    const cardContent: CardContent = {
+      id: item.id,
+      info_name: item.info_name,
+      info_number: item.info_number,
+    };
+
+    return cardContent;
+  };
+
+  const data = data_content.map((item, i) => (
+    <Data content={setCardContent(item)} key={i} />
   ));
 
-  return <Card cardData={handleCardData} />;
+  return <Card data={data} />;
 };
+
+export default App;

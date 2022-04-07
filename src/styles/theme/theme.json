@@ -1,0 +1,14 @@
+{
+  "colors": {
+    "ebony": "#090b1a",
+    "medium_purple": "#aa5cdb",
+    "port_gore": "#1b1938",
+    "santas_gray": "#a4a3af",
+    "white": "#ffffff"
+  },
+  "fonts": {
+    "primary": "Inter",
+    "secondary": "Lexend Deca",
+    "neutral": "sans-serif"
+  }
+}
