@@ -1,6 +1,6 @@
-import infos from "./content/infos.json";
 import { AppBox, DescriptionBox, DataBox } from "./styles/App";
 import workspace from "./assets/workspace.png";
+import infos from "./content/infos.json";
 
 const App: React.FC = (): JSX.Element => {
   return (
