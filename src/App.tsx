@@ -1,4 +1,4 @@
-import stats from "./content/stats.json";
+import infos from "./content/infos.json";
 import { AppBox, DescriptionBox, DataBox } from "./styles/App";
 import workspace from "./assets/workspace.png";
 
@@ -19,10 +19,10 @@ const App: React.FC = (): JSX.Element => {
           </p>
         </DescriptionBox>
         <DataBox>
-          {stats.map((item, i) => (
+          {infos.map((info, i) => (
             <div key={i}>
-              <h2>{item.name}</h2>
-              <h3>{item.total}</h3>
+              <h2>{info.name}</h2>
+              <h3>{info.total}</h3>
             </div>
           ))}
         </DataBox>
